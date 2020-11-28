@@ -74,6 +74,35 @@ const name = 'Luiz Felipe';
 console.log(ansi`Your name is %{f.green;bold}${name}%{normal}!`);
 ```
 
+## You can easy disable colors!
+You can simple disable the colors of the output if you set `ansi.enabled` to false. For example:
+```JavaScript
+const { ansi } = require('@silva97/ansi');
+
+ansi.enabled = false;
+const name = 'Luiz Felipe';
+
+console.log(ansi`Your name is %{f.green;bold}${name}%{normal}!`);
+// Output: "Your name is Luiz Felipe!"
+```
+
+It's will print the text without colors.
+
+## Purify text from ANSI escapes
+If you previous has been escaped an text, but need the raw text back. You just need to use
+the `purify()` function and it will remove all ANSI escapes from the text.
+
+```JavaScript
+const { ansi, purify } = require('@silva97/ansi');
+
+const name = 'Luiz Felipe';
+const welcome = ansi`Your name is %{f.green;bold}${name}%{normal}!`;
+
+console.log(welcome);         // Colored text
+console.log(purify(welcome)); // Normal text
+
+```
+
 
 <!-- Links -->
 [template strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
