@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "CommonJS",
+        "alwaysStrict": true,
+        "declaration": true,
+        "removeComments": true,
+        "baseUrl": "src/",
+        "outDir": "dist/"
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}

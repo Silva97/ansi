@@ -1,0 +1,29 @@
+{
+  "name": "@silva97/ansi",
+  "version": "1.0.0",
+  "author": "Luiz Felipe <felipe.silva337@yahoo.com>",
+  "description": "Tag function to parse ANSI colors on template strings",
+  "license": "MIT",
+  "keywords": [
+    "colors",
+    "colours",
+    "ansi",
+    "ansi escape",
+    "output"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Silva97/ansi"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist/* && tsc",
+    "prepare": "yarn build"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  }
+}
