@@ -1,3 +1,9 @@
+[
+    ![npm package](https://img.shields.io/npm/v/@silva97/ansi)
+](https://www.npmjs.com/package/@silva97/ansi)
+[
+    ![Travis CI](https://travis-ci.com/Silva97/ansi.svg?branch=master)
+](https://travis-ci.com/github/Silva97/ansi)
 # @silva97/ansi
 
 This package implements a *tag* function to parse template strings and add ANSI escape sequences
