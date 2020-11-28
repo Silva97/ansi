@@ -19,11 +19,14 @@ const modeMap = {
 const effectMap = {
     'normal': '0',
     'bold': '1',
+    'italic': '3',
     'under': '4',
     'blink': '5',
     'invert': '7',
     'strike': '9',
 };
+
+const effectRegex = new RegExp(Object.keys(effectMap).join('|'), 'g');
 
 export function ansi(strings: TemplateStringsArray, ...values: any) {
     const regex = /%{([0-9a-z.;]+)}/gi;
@@ -37,8 +40,6 @@ export function ansi(strings: TemplateStringsArray, ...values: any) {
     }
 
     text = text.replace(regex, (match, value: string) => {
-        const effectRegex = new RegExp(Object.keys(effectMap).join('|'), 'g');
-
         value = value
             .replace(/([fFb])\.(\w+)/g, (match, mode, color) => {
                 if (typeof colorMap[color] == 'undefined') {

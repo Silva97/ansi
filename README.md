@@ -52,11 +52,12 @@ You can also specify styles to text. Example: `%{bold;strike}Hello!`.
 |   Style  | ANSI code | Description                              |
 | :------: | :-------: | :--------------------------------------- |
 | `normal` |    `0`    | Resets to normal style                   |
-|  `bold`  |    `1`    | **Bold** text                            |
-| `under`  |    `4`    | <u>underline</u> text                    |
+| `bold`   |    `1`    | **Bold text**                            |
+| `italic` |    `3`    | *Italic text*                            |
+| `under`  |    `4`    | <u>underline text</u>                    |
 | `blink`  |    `5`    | Blinks the text                          |
 | `invert` |    `7`    | Inverts background and foreground colors |
-| `strike` |    `9`    | ~~strike~~ text                          |
+| `strike` |    `9`    | ~~strike text~~                          |
 
 **Warning:** Some styles, like `blink` and `strike`, will not work on all terminals. (i.e. VS code integrated terminal)
 
