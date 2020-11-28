@@ -49,3 +49,11 @@ describe('Testing `ansi` function', () => {
         result = ansi`%{bold}bold, %{f.red}red, %{b.green}green, %{normal}normal, %{94}blue.`;
     });
 });
+
+test('validate `enabled` property', () => {
+    ansi.enabled = false;
+    const expected = 'Normal text';
+    const result = ansi`%{f.green}Normal %{f.red;b.white;bold}text`;
+
+    expect(result).toBe(expected);
+});
