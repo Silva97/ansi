@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 11
+  - 13
+  - 15
+
+cache:
+  npm: false
+
+before_script:
+  - npm ci
+  - npm run build
+
+script: npm test
