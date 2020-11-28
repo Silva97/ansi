@@ -45,7 +45,7 @@ export function ansi(strings: TemplateStringsArray, ...values: any) {
 
                 return modeMap[mode] + colorMap[color];
             })
-            .replace(/normal|bold|subl|blink|invert|strike/, (m) => effectMap[m]);
+            .replace(/normal|bold|subl|blink|invert|strike/g, (m) => effectMap[m]);
 
         return `\x1b[${value}m`;
     });
