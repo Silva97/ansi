@@ -7,7 +7,7 @@ to use colors and text styles on terminal. (read about [template strings])
 // Example
 const { ansi } = require('@silva97/ansi');
 
-console.log(ansi`%{f.green}Hello %{f.red;bold;subl}World!`);
+console.log(ansi`%{f.green}Hello %{f.red;bold;under}World!`);
 ```
 
 Output:  
