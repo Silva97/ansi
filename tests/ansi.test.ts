@@ -41,7 +41,7 @@ describe('Testing `ansi` function', () => {
 
     test('test effect maps', () => {
         expected = 'My \x1b[0;1;4;5;7;9mtest.';
-        result = ansi`My %{normal;bold;subl;blink;invert;strike}test.`;
+        result = ansi`My %{normal;bold;under;blink;invert;strike}test.`;
     });
 
     test('test multiple escapes', () => {

@@ -19,7 +19,7 @@ const modeMap = {
 const effectMap = {
     'normal': '0',
     'bold': '1',
-    'subl': '4',
+    'under': '4',
     'blink': '5',
     'invert': '7',
     'strike': '9',
@@ -45,7 +45,7 @@ export function ansi(strings: TemplateStringsArray, ...values: any) {
 
                 return modeMap[mode] + colorMap[color];
             })
-            .replace(/normal|bold|subl|blink|invert|strike/g, (m) => effectMap[m]);
+            .replace(/normal|bold|under|blink|invert|strike/g, (m) => effectMap[m]);
 
         return `\x1b[${value}m`;
     });
