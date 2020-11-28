@@ -1,6 +1,6 @@
 {
   "name": "@silva97/ansi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Luiz Felipe <felipe.silva337@yahoo.com>",
   "description": "Tag function to parse ANSI colors in template strings",
   "license": "MIT",
