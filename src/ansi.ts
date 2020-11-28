@@ -39,6 +39,10 @@ export function ansi(strings: TemplateStringsArray, ...values: any) {
         }
     }
 
+    if (!ansi.enabled) {
+        return text.replace(regex, '');
+    }
+
     text = text.replace(regex, (match, value: string) => {
         value = value
             .replace(/([fFb])\.(\w+)/g, (match, mode, color) => {
@@ -55,3 +59,5 @@ export function ansi(strings: TemplateStringsArray, ...values: any) {
 
     return text + '\x1b[0m';
 }
+
+ansi.enabled = true;
