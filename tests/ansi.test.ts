@@ -48,6 +48,11 @@ describe('Testing `ansi` function', () => {
         expected = '\x1b[1mbold, \x1b[31mred, \x1b[42mgreen, \x1b[0mnormal, \x1b[94mblue.';
         result = ansi`%{bold}bold, %{f.red}red, %{b.green}green, %{normal}normal, %{94}blue.`;
     });
+
+    test('test invalid color expects empty output', () => {
+        expected = 'Normal text';
+        result = ansi`Normal %{b.invalid}text`;
+    });
 });
 
 test('validate `enabled` property', () => {
