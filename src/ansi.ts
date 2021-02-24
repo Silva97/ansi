@@ -54,6 +54,10 @@ export function ansi(strings: TemplateStringsArray, ...values: any) {
             })
             .replace(effectRegex, (m) => effectMap[m]);
 
+        if (!value) {
+            return '';
+        }
+
         return `\x1b[${value}m`;
     });
 
